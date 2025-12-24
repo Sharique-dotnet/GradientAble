@@ -47,11 +47,11 @@ const routes: Routes = [
     component: GuestComponent,
     children: [
       {
-        path: 'register',
+        path: 'login',
         loadComponent: () => import('./demo/pages/authentication/sign-up/sign-up.component').then((c) => c.SignUpComponent)
       },
       {
-        path: 'login',
+        path: 'register',
         loadComponent: () => import('./demo/pages/authentication/sign-in/sign-in.component').then((c) => c.SignInComponent)
       }
     ]
@@ -62,4 +62,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
